@@ -25,7 +25,7 @@ function ProductsPage() {
     getProduct();
   }, []);
   return (
-    <div>
+    <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-10">
       {product &&
         product.map((product) => {
           return <Product key={product.id} product={product} />;

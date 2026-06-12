@@ -20,7 +20,7 @@ function MaqolaPage() {
     getmaqola();
   }, []);
   return (
-    <div>
+    <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-10">
       {maqola &&
         maqola.map((item) => {
           return <Maqola key={item.id} item={item} />;

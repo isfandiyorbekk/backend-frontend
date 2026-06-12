@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="bg-white shadow-md px-6 py-4 flex items-center justify-between">
@@ -12,13 +12,22 @@ function Navbar() {
       </div>
 
       {/* Menu */}
-      <ul className="flex items-center gap-6 font-medium text-gray-700">
-        <li className="cursor-pointer hover:text-blue-600">Users</li>
+      <div className="flex items-center gap-6 font-medium text-gray-700">
+        <Link className="cursor-pointer hover:text-blue-600" to={"/"}>
+          Users
+        </Link>
 
-        <li className="cursor-pointer hover:text-blue-600">Products</li>
+        <Link className="cursor-pointer hover:text-blue-600" to={"/products"}>
+          Products
+        </Link>
 
-        <li className="cursor-pointer hover:text-blue-600">Maqollar</li>
-      </ul>
+        <Link className="cursor-pointer hover:text-blue-600" to={"/maqollar"}>
+          Maqollar
+        </Link>
+        <Link className="cursor-pointer hover:text-blue-600" to={"/admin"}>
+          Admin
+        </Link>
+      </div>
     </nav>
   );
 }

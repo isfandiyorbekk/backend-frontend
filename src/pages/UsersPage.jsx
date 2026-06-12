@@ -20,12 +20,14 @@ function Users() {
     getUser();
   }, []);
   return (
-    <div>
-      {users &&
-        users.map((user) => {
-          return <Card key={user.id} user={user} />;
-        })}
-    </div>
+    <>
+      <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-10">
+        {users &&
+          users.map((user) => {
+            return <Card key={user.id} user={user} />;
+          })}
+      </div>
+    </>
   );
 }
 
