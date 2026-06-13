@@ -52,7 +52,9 @@ function UsersAdminBottom({ users, product, post }) {
                   </td>
                   <td className="py-3 px-2">
                     {product
-                      ? String(item.available)
+                      ? item.available === true
+                        ? "Yes"
+                        : "No"
                       : post
                         ? item.likes
                         : item.phone}
