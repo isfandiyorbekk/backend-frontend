@@ -11,6 +11,7 @@ import AdminLayout from "../layouts/AdminLayout";
 import UsersAdmin from "../companets/UsersAdmin";
 import ProductAdmin from "../companets/ProductAdmin";
 import Posts from "../companets/Posts";
+import UserDetailPage from "../companets/UserDetailPage";
 function App() {
   const routes = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ function App() {
           element: <MaqolaPage />,
         },
       ],
+    },
+    {
+      path: `users/:id`,
+      element: <UserDetailPage />,
     },
     {
       path: "/admin",

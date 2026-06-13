@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Card({ user }) {
   const initials = user.name
@@ -51,9 +52,12 @@ function Card({ user }) {
               </div>
             </div>
 
-            <button className="w-full mt-6 bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition">
+            <Link
+              to={`/users/${user.id}`}
+              className="w-full mt-6 bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition"
+            >
               Contact User
-            </button>
+            </Link>
           </div>
         </div>
       </div>
