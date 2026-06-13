@@ -26,6 +26,9 @@ function Product({ product }) {
             <div className="flex justify-between">
               <span className="text-gray-500">Narxi:</span>
               <span className="font-bold text-blue-600">{product.price}</span>
+
+
+              
             </div>
 
             <div className="flex justify-between">
