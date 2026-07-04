@@ -7,7 +7,6 @@ function Card({ user }) {
     .map((item) => item[0])
     .slice(0, 2)
     .join("");
-
   return (
     <div className="flex justify-center p-4">
       <div className="w-[280px] bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
